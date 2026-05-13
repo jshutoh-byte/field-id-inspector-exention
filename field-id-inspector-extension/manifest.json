@@ -1,0 +1,15 @@
+{
+  "manifest_version": 3,
+  "name": "Field ID Inspector",
+  "version": "1.0.0",
+  "description": "Web画面の入力欄の id / name / type などを確認するだけの調査ツールです。外部通信はしません。",
+  "permissions": ["clipboardWrite"],
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["src/inspector.js"],
+      "run_at": "document_end",
+      "all_frames": true
+    }
+  ]
+}
